@@ -1,0 +1,113 @@
+# Pandas Best Practices
+
+## Guidance
+
+- Use the brackets for selecting a column of data.
+- Use NumPy arrays if your application relies on performance for selecting a single cell of data and not at or iat.
+- Only use read_csv to read in delimitted text files.
+- Use only isna and notna.
+- Only use the arithmetic and comparison methods when absolutely necessary, otherwise use the operators.
+- Use the Pandas method over any built-in Python function with the same name.
+- Use df.groupby('grouping column').agg({'aggregating column': 'aggregating function'}) as your primary syntax of choice.
+- Avoid using a MultiIndex. Flatten it after a call to groupby by renaming columns and resetting the index.
+- use pivot_table when comparing groups.
+- Only use crosstab when finding relative frequency.
+- Consider using only pivot_table and not pivot.
+- Use melt over stack because it allows you to rename columns and it avoids a MultiIndex.
+- Use pivot_table over unstack or pivot.
+
+## Best of the API
+
+- Attributes:
+  - columns
+  - dtypes
+  - index
+  - shape
+  - T
+  - values
+- Aggregation Methods:
+  - all
+  - any
+  - count
+  - describe
+  - idxmax
+  - idxmin
+  - max
+  - mean
+  - median
+  - min
+  - mode
+  - nunique
+  - sum
+  - std
+  - var
+- Non-Aggretaion Statistical Methods:
+  - abs
+  - clip
+  - corr
+  - cov
+  - cummax
+  - cummin
+  - cumprod
+  - cumsum
+  - diff
+  - nlargest
+  - nsmallest
+  - pct_change
+  - prod
+  - quantile
+  - rank
+  - round
+- Subset Selection:
+  - head
+  - iloc
+  - loc
+  - tail
+- Missing Value Handling:
+  - dropna
+  - fillna
+  - interpolate
+  - isna
+  - notna
+- Grouping:
+  - expanding
+  - groupby
+  - pivot_table
+  - resample
+  - rolling
+- Joining Data:
+  - append
+  - merge
+- Other:
+  - asfreq
+  - astype
+  - copy
+  - drop
+  - drop_duplicates
+  - equals
+  - isin
+  - melt
+  - plot
+  - rename
+  - replace
+  - reset_index
+  - sample
+  - select_dtypes
+  - shift
+  - sort_index
+  - sort_values
+  - to_csv
+  - to_json
+  - to_sql
+- Functions:
+  - pd.concat
+  - pd.crosstab
+  - pd.cut
+  - pd.qcut
+  - pd.read_csv
+  - pd.read_json
+  - pd.read_sql
+  - pd.to_datetime
+  - pd.to_timedelta
+
+[**post**](https://medium.com/dunder-data/minimally-sufficient-pandas-a8e67f2a2428)
